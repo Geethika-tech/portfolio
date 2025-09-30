@@ -52,7 +52,7 @@ export default function AboutMe(){
 
                   {/* Download CV Button */}
                   <a
-                    href="/Beatrice_Wambui_CV.pdf"
+                    href="Geethika-Resume.pdf"
                     download
                     className="bg-purple-600 text-white px-8 py-3 rounded-xl shadow hover:bg-purple-700 transition duration-300 text-lg"
                   >

@@ -6,32 +6,53 @@ import React from "react";
 export default function Contact(){
 
     return(
-        <div className="flex flex-col items-center w-full text-lg">
-                           <div className="flex items-center gap-3 text-gray-700">
+       <div className="flex flex-col items-center justify-start min-h-screen w-full text-lg bg-gradient-to-b from-purple-100 to-orange-50 p-6 gap-10">
 
-                             <span>+61 0493707965</span>
-                           </div>
+         {/* Heading & Paragraph */}
+         <div className="text-center max-w-2xl">
+           <h1 className="text-3xl font-bold text-purple-700 mb-4">Let’s Connect!</h1>
+           <p className="text-gray-700 text-lg">
+             Shoot me a message about any upcoming projects or if you need help with something —
+             I’d be happy to collaborate or assist.
+           </p>
+         </div>
 
-                           <div className="flex items-center gap-3 text-gray-700">
+         {/* Form + Image Section */}
+         <div className="flex flex-col md:flex-row items-center justify-center w-full gap-10">
+           {/* Form */}
+           <form className="flex flex-col gap-4 w-full md:w-1/2 max-w-lg p-8 bg-white rounded-2xl shadow-lg">
+             <input
+               type="text"
+               placeholder="Name"
+               className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+             />
+             <input
+               type="email"
+               placeholder="Email"
+               className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+             />
+             <textarea
+               placeholder="Message"
+               className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 h-32 resize-none"
+             />
+             <button
+               type="submit"
+               className="bg-purple-500 text-white py-3 rounded-lg shadow hover:bg-purple-600 transition"
+             >
+               Send
+             </button>
+           </form>
 
-                             <span>geethikapidikiti@gmail.com</span>
-                           </div>
-
-                           <div className="flex items-center gap-3 text-gray-700">
-
-                             <span>Sydney, Australia</span>
-                           </div>
-                         </div>
-
-
+           {/* Image */}
+           <img
+             src="gif_sent-dribble.gif"
+             alt="Send email gif"
+             className="w-72 md:w-96 h-auto  rounded-xl"
+           />
+         </div>
+       </div>
 
 
+)
 
-
-        )
-
-
-
-
-
-    }
+}
