@@ -1,6 +1,7 @@
 
 "use client";
 import React from "react";
+import Image from "next/image";
 
 
 export default function Contact(){
@@ -44,10 +45,12 @@ export default function Contact(){
            </form>
 
            {/* Image */}
-           <img
-             src="gif_sent-dribble.gif"
+           <Image
+             src="/gif_sent-dribble.gif"
              alt="Send email gif"
-             className="w-72 md:w-96 h-auto  rounded-xl"
+             className="rounded-xl"
+             width={384}
+             height={256}
            />
          </div>
        </div>

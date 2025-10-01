@@ -4,6 +4,7 @@ import "./globals.css";
 import { MdEmail } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
 import { IoIosCall } from "react-icons/io";
+import Link from 'next/link';
 
 
 const geistSans = Geist({
@@ -36,13 +37,13 @@ export default function RootLayout({
 
                 <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
                   {/* Logo / Name */}
-                  <a href="/" className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-orange-600 bg-clip-text text-transparent">Geethika Pidikiti</a>
+                  <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-orange-600 bg-clip-text text-transparent">Geethika Pidikiti</Link>
 
                   {/* Nav Links */}
                   <div className="hidden md:flex space-x-8 text-gray-700 font-medium">
-                    <a href="/experience" className="hover:text-purple-600 transition">Experience</a>
-                    <a href="/projects" className="hover:text-purple-600 transition">Projects</a>
-                    <a href="/contact" className="hover:text-purple-600 transition">Contact Me</a>
+                    <Link href="/experience" className="hover:text-purple-600 transition">Experience</Link>
+                    <Link href="/projects" className="hover:text-purple-600 transition">Projects</Link>
+                    <Link href="/contact" className="hover:text-purple-600 transition">Contact Me</Link>
 
                   </div>
 
