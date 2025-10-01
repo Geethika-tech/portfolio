@@ -1,10 +1,7 @@
 
 import React from 'react';
-import RollingTitles from './rollingTitles';
-import Typography from "@mui/material/Typography";
 import AboutMe from '../about/page';
-import SocialTab from './socialTab';
-import Footer from './footer';
+
 
 
 export default function Dashboard(){
