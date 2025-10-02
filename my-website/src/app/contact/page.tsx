@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React,{ useState, ChangeEvent, FormEvent } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 
 export default function Contact() {
@@ -9,11 +9,11 @@ export default function Contact() {
   const [status, setStatus] = useState("");
 
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setStatus("");
@@ -35,12 +35,17 @@ export default function Contact() {
         toast.error(`❌ Failed to send message: ${data.error || "Unknown error"}`); // error notification
         console.log(data);
       }
-    } catch (err) {
-      setStatus("⚠️ Error: " + err.message);
-      toast.error("⚠️ Error: " + err.message); // error notification
-      console.log(err);
-    }
+    } catch (err: unknown) {
+        let errorMessage = "Something went wrong";
 
+        if (err instanceof Error) {
+          errorMessage = err.message;
+        }
+
+
+        toast.error("⚠️ Error: " + errorMessage); // error notification
+        console.log(err);
+      }
     setLoading(false);
   };
 
