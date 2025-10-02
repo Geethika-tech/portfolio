@@ -1,142 +1,187 @@
 import { Github } from "lucide-react";
 
-export default function Page() {
-  return (
-    <main className="min-h-screen flex justify-center p-6">
-      <div className="max-w-5xl w-full rounded-2xl p-8 space-y-12">
-
-       {/* Projects Section */}
-        <section>
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
-            Projects
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* BuildLess Project */}
-            <ProjectCard
-              title="Team Feature Delivery Platform"
-              company="BuildLess"
-              description="Led development of a scalable platform, coordinating frontend and backend feature delivery with a 6-member team."
-              tags={["React.js", "TypeScript", "Team Leadership"]}
-            />
-
-            {/* Startworks Project */}
-            <ProjectCard
-              title="Performance-Optimized Dashboard"
-              company="Startworks"
-              description="Built an interactive dashboard with lazy loading, reducing UI load times by 20% and improving user experience."
-              tags={["Next.js", "Spring Boot", "AWS"]}
-            />
-
-            {/* Infosys Project */}
-            <ProjectCard
-              title="Enterprise Dashboard Suite"
-              company="Infosys"
-              description="Designed and maintained dashboards serving multiple teams, with reusable components and automated Jest tests."
-              tags={["React.js", "Node.js", "Jest"]}
-            />
-
-            {/* Personal Project with GitHub link */}
-            <ProjectCard
-              title="Personal Portfolio"
-              company="Personal Project"
-              description="Developed a responsive personal portfolio site showcasing projects, skills, and experience."
-              tags={["Next.js", "TailwindCSS", "Vercel"]}
-              github="https://github.com/Geethika-tech/Portfolio"
-            />
-
-            <ProjectCard
-                          title="Financial Dashboard"
-                          company="Personal Project"
-                          description="Built a Next.js financial dashboard application with interactive charts and real-time data visualization."
-                          tags={["Next.js", "TypeScript", "Recharts", "TailwindCSS"]}
-                          github="https://github.com/Geethika-tech/Nextjs-dashboard"
-                        />
-          </div>
-        </section>
-      </div>
-    </main>
-  );
-}
-
-/* -------- Job Component -------- */
-type JobProps = {
-  role: string;
-  company: string;
-  location: string;
-  date: string;
-  description?: string;
-  points: string[];
-  skills: string[];
-};
-
-function Job({ role, company, location, date, description, points, skills }: JobProps) {
-  return (
-    <div className="space-y-3">
-      <h3 className="text-xl font-bold text-gray-900">
-        {company} — {role}
-      </h3>
-      <p className="text-sm text-gray-600">
-        {date} | {location}
-      </p>
-      {description && <p className="text-gray-700">{description}</p>}
-
-      <ul className="list-disc list-inside space-y-1 text-gray-700">
-        {points.map((point, idx) => (
-          <li key={idx}>{point}</li>
-        ))}
-      </ul>
-
-      {/* Skills Learned */}
-      <div className="flex flex-wrap gap-2 pt-2">
-        {skills.map((skill, idx) => (
-          <span
-            key={idx}
-            className="px-3 py-1 text-sm bg-blue-100 text-blue-800 rounded-full"
-          >
-            {skill}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-/* -------- Project Card Component -------- */
+/* -------- Modern Project Card -------- */
 type ProjectCardProps = {
   title: string;
-  company: string;
-  description: string;
-  tags: string[];
+  year?: string;
+  shortDescription: string;
+  detailedDescription?: string;
+  technologies: string[];
+  features?: string[];
+  responsibilities?: string[];
   github?: string;
 };
 
-function ProjectCard({ title, company, description, tags, github }: ProjectCardProps) {
+function ProjectCard({
+  title,
+  year,
+  shortDescription,
+  detailedDescription,
+  technologies,
+  features,
+  responsibilities,
+  github,
+}: ProjectCardProps) {
   return (
-    <div className="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition duration-200 space-y-3">
-      <h3 className="text-lg font-bold text-gray-900">
-        {title} <span className="text-sm text-gray-500">({company})</span>
+    <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 space-y-4 border-t-4 border-orange-500">
+
+      {/* Title + Year */}
+      <h3 className="text-xl font-bold text-gray-900 dark:text-white flex justify-between items-center">
+        <span>{title}</span>
+        {year && <span className="text-sm text-gray-500 dark:text-gray-400">{year}</span>}
       </h3>
-      <p className="text-gray-700">{description}</p>
-      <div className="flex flex-wrap gap-2">
-        {tags.map((tag, idx) => (
-          <span
-            key={idx}
-            className="px-3 py-1 text-xs bg-purple-100 text-purple-800 rounded-full"
-          >
-            {tag}
-          </span>
-        ))}
+
+      {/* Short Description */}
+      <p className="text-gray-700 dark:text-gray-300 font-medium">{shortDescription}</p>
+
+      {/* Detailed Description */}
+      {detailedDescription && (
+        <p className="text-gray-600 dark:text-gray-400">{detailedDescription}</p>
+      )}
+
+      {/* Technologies Used */}
+      <div>
+        <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-1">Technologies Used:</h4>
+        <div className="flex flex-wrap gap-2">
+          {technologies.map((tech, idx) => (
+            <span
+              key={idx}
+              className="px-3 py-1 text-xs bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 dark:from-purple-700 dark:to-pink-700 dark:text-purple-200 rounded-full font-medium"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
       </div>
+
+      {/* Key Features */}
+      {features && (
+        <div>
+          <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-1">Key Features:</h4>
+          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+            {features.map((feature, idx) => (
+              <li key={idx}>{feature}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Responsibilities */}
+      {responsibilities && (
+        <div>
+          <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-1">My Responsibilities:</h4>
+          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+            {responsibilities.map((resp, idx) => (
+              <li key={idx}>{resp}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* GitHub button */}
       {github && (
         <a
           href={github}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:underline"
+          className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500 text-white rounded-full text-sm font-semibold hover:bg-purple-600 transition"
         >
           <Github size={16} /> View on GitHub
         </a>
       )}
     </div>
+  );
+}
+
+/* -------- Page Component -------- */
+export default function Page() {
+  // Work projects
+  const workProjects = [
+    {
+      title: "Team Feature Delivery Platform",
+      year: "2025",
+      shortDescription:
+        "Led development of a scalable platform, coordinating frontend and backend feature delivery with a 6-member team.",
+      detailedDescription:
+        "This platform enables teams to collaborate efficiently, track progress, and deploy features seamlessly across multiple environments.",
+      technologies: ["React.js", "TypeScript", "Node.js", "Firestore","Firebase"],
+      features: ["Team collaboration", "Feature tracking", "Backend integration"],
+      responsibilities: ["Led development", "Managed team workflow", "Handled backend API integration"],
+    },
+    {
+      title: "Performance-Optimized Dashboard",
+      year: "2024",
+      shortDescription:
+        "Built an interactive dashboard with lazy loading, reducing UI load times by 20% and improving user experience.",
+      detailedDescription:
+        "This dashboard allows real-time analytics, performance tracking, and visual reporting for business metrics.",
+      technologies: ["Next.js", "React.js", "Typescript", "SpringBoot", "Node.js", "AWS", "Sql"],
+      features: ["Lazy loading", "Interactive charts", "Real-time updates"],
+      responsibilities: ["Developed frontend UI", "Optimized backend API calls", "Improved performance"],
+    },
+    {
+      title: "Enterprise Dashboard Suite",
+      year: "2023",
+      shortDescription:
+        "Designed and maintained dashboards serving multiple teams, with reusable components and automated Jest tests.",
+      detailedDescription:
+        "A suite of dashboards for enterprise analytics, enabling data-driven decisions across departments.",
+      technologies: ["React.js", "Typescript", "Node.js", "Jest","Sql"],
+      features: ["Reusable components", "Automated testing", "Multi-team access"],
+      responsibilities: ["Maintained dashboards", "Implemented automated tests", "Collaborated with QA"],
+    },
+  ];
+
+  // Personal projects
+  const personalProjects = [
+    {
+      title: "Personal Portfolio",
+      year: "2025",
+      shortDescription:
+        "Developed a responsive personal portfolio site showcasing projects, skills, and experience.",
+      detailedDescription:
+        "The portfolio demonstrates work experience, personal projects, and technical skills in a modern, interactive format.",
+      technologies: ["Next.js", "TailwindCSS", "Vercel"],
+      github: "https://github.com/Geethika-tech/Portfolio",
+      features: ["Responsive design", "Interactive sections", "Dark mode support"],
+      responsibilities: ["Designed UI/UX", "Implemented React components", "Deployed on Vercel"],
+    },
+    {
+      title: "Financial Dashboard (In progress)",
+      year: "2024",
+      shortDescription:
+        "Built a Next.js financial dashboard application with interactive charts and real-time data visualization.",
+      detailedDescription:
+        "Provides users with insights on financial data, allowing tracking, forecasting, and reporting in real-time.",
+      technologies: ["Next.js", "TypeScript", "Recharts", "TailwindCSS","PostgreSQL"],
+//       github: "https://github.com/Geethika-tech/Nextjs-dashboard",
+      features: ["Interactive charts", "Real-time updates", "Data export"],
+      responsibilities: ["Developed frontend", "Integrated APIs", "Implemented charts"],
+    },
+
+  ];
+
+  return (
+    <main className="min-h-screen p-6 space-y-16">
+      {/* Work Projects */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white">Work Projects</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {workProjects.map((project, idx) => (
+            <ProjectCard key={idx} {...project} />
+          ))}
+        </div>
+      </section>
+
+      {/* Personal Projects */}
+      <section className="space-y-6 p-8 rounded-3xl ">
+        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white">Personal Projects</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {personalProjects.map((project, idx) => (
+            <ProjectCard key={idx} {...project} />
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }

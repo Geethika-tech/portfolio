@@ -35,7 +35,7 @@ const jobs: JobProps[] = [
       "Collaborated with cross-functional teams on feature planning.",
     ],
     skills: ["Leadership", "React.js", "TypeScript", "Full-stack Development", "Agile Collaboration"],
-    colorScheme: { bg: "bg-purple-50", text: "text-purple-600", hover: "hover:shadow-purple-200" },
+    colorScheme: { bg: "bg-white", text: "text-purple-600", hover: "hover:shadow-md" },
   },
   {
     role: "Software Engineer",
@@ -49,7 +49,7 @@ const jobs: JobProps[] = [
       "Delivered key features contributing to client product growth.",
     ],
     skills: ["Next.js", "React.js", "Spring Boot", "AWS EC2", "Performance Optimization"],
-    colorScheme: { bg: "bg-orange-50", text: "text-orange-600", hover: "hover:shadow-orange-200" },
+    colorScheme: { bg: "bg-white", text: "text-orange-600", hover: "hover:shadow-md" },
   },
   {
     role: "Senior Systems Engineer",
@@ -63,13 +63,13 @@ const jobs: JobProps[] = [
       "Delivered client-critical features on time through cross-team collaboration.",
     ],
     skills: ["React.js", "Node.js", "Reusable Components", "Jest Testing", "Cross-team Collaboration"],
-    colorScheme: { bg: "bg-green-50", text: "text-green-600", hover: "hover:shadow-green-200" },
+    colorScheme: { bg: "bg-white", text: "text-purple-600", hover: "hover:shadow-md" },
   },
 ];
 
 export default function Page() {
   return (
-    <main className="min-h-screen flex flex-col items-center p-6 ">
+    <main className="flex flex-col items-center p-6 ">
       <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">Work Experience</h1>
 
       {/* Responsive cards grid */}
