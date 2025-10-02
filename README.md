@@ -1,2 +1,2 @@
 # Portfolio
-This website gives info about my projects, work experience, education and contact information
+This website gives info about my projects, work experience, and contact information
