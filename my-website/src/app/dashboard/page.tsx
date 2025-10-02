@@ -7,7 +7,7 @@ import AboutMe from '../about/page';
 export default function Dashboard(){
 
     return (
-      <div className="bg-gradient-to-b from-purple-100 to-orange-50 min-h-screen flex flex-col">
+      <div className="flex flex-col">
 
 
 

@@ -33,7 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
 
-      <nav className="w-full sticky top-0 z-50 bg-purple-100">
+      <nav className="w-full sticky top-0 z-50 bg-white/70 backdrop-blur-md shadow-md">
 
                 <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
                   {/* Logo / Name */}
@@ -68,25 +68,29 @@ export default function RootLayout({
                 </div>
               </nav>
         {children}
-        <div className="fixed right-6 bottom-6 rounded-2xl p-4 flex items-center gap-6 text-gray-700 z-50">
-              {/* Phone */}
-              <div className="flex items-center space-x-2">
-                <IoIosCall/>
-                <span><strong>+61 493 707 965</strong></span>
-              </div>
+        <div className="fixed right-6 bottom-6 rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-gray-700 z-50
+                         backdrop-blur-md shadow-lg bg-white/70">
+          {/* Phone */}
+          <div className="flex items-center space-x-2">
+            <IoIosCall className="text-lg" />
+            <a href="tel:+61493707965" className="text-sm sm:text-base font-semibold hover:underline">
+              +61 493 707 965
+            </a>
+          </div>
 
-              {/* Email */}
-              <div className="flex items-center space-x-2">
-                <MdEmail/>
-                <span><strong>geethikapidikiti@gmail.com</strong></span>
-              </div>
+          <div className="flex items-center space-x-2">
+            <MdEmail className="text-lg" />
+            <a href="mailto:geethikapidikiti@gmail.com" className="text-sm sm:text-base font-semibold hover:underline">
+              geethikapidikiti@gmail.com
+            </a>
+          </div>
 
-              {/* Location (optional) */}
-              <div className="flex items-center space-x-2">
-                <IoLocationSharp/>
-                <span><strong>Sydney, Australia</strong></span>
-              </div>
-            </div>
+          {/* Location */}
+          <div className="flex items-center space-x-2">
+            <IoLocationSharp className="text-lg" />
+            <span className="text-sm sm:text-base"><strong>Sydney, Australia</strong></span>
+          </div>
+        </div>
       </body>
     </html>
   );

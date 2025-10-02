@@ -117,6 +117,8 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-gradient-to-b from-purple-100 to-orange-50 text-foreground;
+     @apply font-sans;
+    background-color: #FEE8D9; /* plain CSS */
+    color: var(--foreground); /* keeps Tailwind foreground color */
   }
 }
