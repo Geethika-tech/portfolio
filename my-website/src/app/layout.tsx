@@ -27,6 +27,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+     const phone = process.env.NEXT_PUBLIC_PHONE;
+     const email = process.env.NEXT_PUBLIC_EMAIL;
+     const location = process.env.NEXT_PUBLIC_LOCATION;
   return (
     <html lang="en">
       <body
@@ -74,21 +77,21 @@ export default function RootLayout({
           <div className="flex items-center space-x-2">
             <IoIosCall className="text-lg" />
             <a href="tel:+61493707965" className="text-sm sm:text-base font-semibold hover:underline">
-              +61 493 707 965
+              {phone}
             </a>
           </div>
 
           <div className="flex items-center space-x-2">
             <MdEmail className="text-lg" />
             <a href="mailto:geethikapidikiti@gmail.com" className="text-sm sm:text-base font-semibold hover:underline">
-              geethikapidikiti@gmail.com
+              {email}
             </a>
           </div>
 
           {/* Location */}
           <div className="flex items-center space-x-2">
             <IoLocationSharp className="text-lg" />
-            <span className="text-sm sm:text-base"><strong>Sydney, Australia</strong></span>
+            <span className="text-sm sm:text-base"><strong>{location}</strong></span>
           </div>
         </div>
       </body>
