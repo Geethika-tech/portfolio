@@ -14,7 +14,7 @@ export default function AboutMe(){
                 <div className="md:w-1/3 flex flex-col items-center bg-gray-50 p-8 rounded-3xl shadow-inner space-y-8">
                   {/* Profile Image */}
                   <Image
-                    src="/profilePhoto.jpg"
+                    src="/profilePhoto.png"
                     alt="Profile"
                  className="rounded-full object-cover border-4"
                      width={240}
