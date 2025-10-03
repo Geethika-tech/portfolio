@@ -1,12 +1,12 @@
 
-import DashboardPage from "./dashboard/page";
+import Dashboard from "./dashboard/dashboard";
 import DashboardLayout from "./dashboard/layout";
 
 export default function Home() {
   return (
     <div>
     <DashboardLayout>
-    <DashboardPage/>
+    <Dashboard/>
     </DashboardLayout>
     </div>
   );
