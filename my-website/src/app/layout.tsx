@@ -74,12 +74,7 @@ export default function RootLayout({
         <div className="fixed right-6 bottom-6 rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-gray-700 z-50
                          backdrop-blur-md shadow-lg bg-white/70">
           {/* Phone */}
-          <div className="flex items-center space-x-2">
-            <IoIosCall className="text-lg" />
-            <a href="tel:+61493707965" className="text-sm sm:text-base font-semibold hover:underline">
-              {phone}
-            </a>
-          </div>
+
 
           <div className="flex items-center space-x-2">
             <MdEmail className="text-lg" />
