@@ -70,7 +70,7 @@ const jobs: JobProps[] = [
 export default function Page() {
   return (
     <main className="flex flex-col items-center p-6 ">
-      <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">Work Experience</h1>
+      <h1 className="text-4xl bg-gradient-to-r from-purple-600 to-orange-600 bg-clip-text text-transparent mt-10 align-center mb-8">Work Experience</h1>
 
       {/* Responsive cards grid */}
       <div className="flex flex-wrap gap-6 justify-center">
@@ -88,7 +88,7 @@ export default function Page() {
             </CardHeader>
 
             <CardContent className="space-y-3 text-gray-700 overflow-y-auto max-h-[50vh]">
-              <ul className="list-disc list-inside space-y-1">
+              <ul className="list-disc pl-6 space-y-2 text-gray-700 text-justify leading-relaxed">
                 {job.points.map((point, idx) => <li key={idx}>{point}</li>)}
               </ul>
               <div className="flex flex-wrap gap-2 pt-2">

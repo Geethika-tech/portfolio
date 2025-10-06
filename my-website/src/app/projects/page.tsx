@@ -165,7 +165,7 @@ export default function Page() {
     <main className="min-h-screen p-6 space-y-16">
       {/* Work Projects */}
       <section className="space-y-6">
-        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white">Work Projects</h2>
+        <h2 className="text-4xl bg-gradient-to-r from-purple-600 to-orange-600 bg-clip-text text-transparent mt-10 text-center">Work Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {workProjects.map((project, idx) => (
             <ProjectCard key={idx} {...project} />
@@ -175,7 +175,7 @@ export default function Page() {
 
       {/* Personal Projects */}
       <section className="space-y-6 p-8 rounded-3xl ">
-        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white">Personal Projects</h2>
+        <h2 className="text-4xl bg-gradient-to-r from-purple-600 to-orange-600 bg-clip-text text-transparent mt-10 text-center">Personal Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {personalProjects.map((project, idx) => (
             <ProjectCard key={idx} {...project} />

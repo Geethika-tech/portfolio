@@ -17,8 +17,8 @@ export default function AboutMe(){
                     src="/profilePhoto.png"
                     alt="Profile"
                  className="rounded-full object-cover border-4"
-                     width={240}
-                     height={240}
+                     width={200}
+                     height={200}
 
                   />
 
@@ -60,17 +60,17 @@ export default function AboutMe(){
 
                 {/* Right Side - About Me */}
                 <div className="md:w-2/3 flex flex-col space-y-8">
-                  <h3 className="text-4xl font-semibold text-gray-800 text-center">About me</h3>
-                  <p className="text-gray-700 leading-relaxed text-lg">
+                  <h3 className="text-4xl  bg-gradient-to-r from-purple-600 to-orange-600 bg-clip-text text-transparent text-center">About me</h3>
+                  <p className="text-gray-700 text-justify leading-relaxed tracking-wide hyphens-auto">
                   Hello! I have over 4 years of experience as a Full Stack Developer, specializing in building scalable web applications with React.js, Next.js,Typescript, Node.js. I have developed and optimized REST APIs, implemented responsive UI components, and deployed applications on AWS. My work includes integrating frontend and backend systems, enhancing performance, and ensuring accessibility standards. I enjoy solving complex problems, collaborating with cross-functional teams, and delivering user-focused solutions.
                   </p>
 
-                  <h4 className="text-3xl font-semibold text-gray-800 text-center">What I do!</h4>
+                  <h4 className="text-4xl  bg-gradient-to-r from-purple-600 to-orange-600 bg-clip-text text-transparent text-center">What I do!</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     {/* Web Development */}
                     <div className="bg-purple-50 p-6 rounded-2xl shadow hover:shadow-purple-200 transition duration-300">
                       <h5 className="font-semibold text-purple-600 mb-3 text-lg">Web Development</h5>
-                      <p className="text-gray-700 text-base">
+                      <p className="text-gray-700 text-justify leading-relaxed tracking-wide hyphens-auto">
 I specialize in building full-stack applications using React.js, Next.js, TypeScript, and Node.js. I enjoy creating responsive, high-performance, and user-friendly web platforms that solve real-world problems. From designing interactive dashboards to integrating backend APIs, I focus on delivering seamless experiences while keeping code scalable and maintainable.
                       </p>
                     </div>
@@ -81,7 +81,7 @@ I specialize in building full-stack applications using React.js, Next.js, TypeSc
                     {/* Mentorship */}
                     <div className="bg-orange-50 p-6 rounded-2xl shadow hover:shadow-orange-200 transition duration-300">
                       <h5 className="font-semibold text-orange-600 mb-3 text-lg">Mentorship</h5>
-                      <p className="text-gray-700 text-base">
+                      <p className="text-gray-700 text-justify leading-relaxed tracking-wide hyphens-auto">
                         I have found great joy in sharing my knowledge with others. Being a technical mentor allows me to give back to the community that has supported me throughout my career.
                       </p>
                     </div>
