@@ -54,7 +54,7 @@ export default function Contact() {
     <div className="flex flex-col items-center justify-start w-full text-lg p-6 gap-10">
       {/* Heading */}
       <div className="text-center max-w-2xl">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-orange-600 bg-clip-text text-transparent mt-10 align-center">Let’s Connect!</h1>
+        <h1 className="text-4xl bg-gradient-to-r from-purple-600 to-orange-600 bg-clip-text text-transparent mt-10 align-center">Let’s Connect!</h1>
         <p className="text-gray-700 text-lg">
           Shoot me a message about any upcoming projects or if you need help
           with something — I’d be happy to collaborate or assist.

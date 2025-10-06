@@ -118,7 +118,7 @@
   }
   body {
      @apply font-sans;
-    background-color: #FEE8D9; /* plain CSS */
+    background-color: #FFE8D6; /* plain CSS */
     color: var(--foreground); /* keeps Tailwind foreground color */
   }
 }
