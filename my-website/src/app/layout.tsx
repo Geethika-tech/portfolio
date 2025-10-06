@@ -6,8 +6,11 @@ import Footer from "../components/footer";
 
 
 export const metadata = {
-  title: "Your Site Title",
+  title: "Portfolio",
   description: "Your site description",
+  icons: {
+      icon: "/favicon.jpg",
+    },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
