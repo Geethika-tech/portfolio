@@ -110,7 +110,7 @@ export default function Page() {
     },
     {
       title: "Performance-Optimized Dashboard",
-      year: "2024",
+      year: "2025",
       shortDescription:
         "Built an interactive dashboard with lazy loading, reducing UI load times by 20% and improving user experience.",
       detailedDescription:
