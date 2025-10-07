@@ -7,7 +7,7 @@ import Footer from "../components/footer";
 
 export const metadata = {
   title: "Portfolio",
-  description: "Your site description",
+  description: "Geethika Pidikiti Portfolio",
   icons: {
       icon: "/favicon.jpg",
     },
