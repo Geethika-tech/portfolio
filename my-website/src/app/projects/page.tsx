@@ -110,7 +110,7 @@ export default function Page() {
     },
     {
       title: "Performance-Optimized Dashboard",
-      year: "2025",
+      year: "2024",
       shortDescription:
         "Built an interactive dashboard with lazy loading, reducing UI load times by 20% and improving user experience.",
       detailedDescription:
@@ -148,7 +148,7 @@ export default function Page() {
     },
     {
       title: "Financial Dashboard (In progress)",
-      year: "2024",
+      year: "2025",
       shortDescription:
         "Built a Next.js financial dashboard application with interactive charts and real-time data visualization.",
       detailedDescription:
