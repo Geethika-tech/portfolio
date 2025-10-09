@@ -118,8 +118,9 @@
   }
   body {
      @apply font-sans;
-    background-color: #FFE8D6; /* plain CSS */
+    background: linear-gradient(135deg, #F3E8FF, #FFF4E5, #E6F0FF); /* plain CSS */
     color: var(--foreground); /* keeps Tailwind foreground color */
+    min-height: 100vh;
   }
 }
 @keyframes fade-in {
