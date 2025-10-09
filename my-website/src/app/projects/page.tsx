@@ -148,7 +148,7 @@ export default function Page() {
     },
     {
       title: "Financial Dashboard (In progress)",
-      year: "2024",
+      year: "2025",
       shortDescription:
         "Built a Next.js financial dashboard application with interactive charts and real-time data visualization.",
       detailedDescription:

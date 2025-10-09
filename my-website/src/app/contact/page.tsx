@@ -45,8 +45,8 @@ export default function Contact() {
 
         toast.error("⚠️ Error: " + errorMessage); // error notification
         console.log(err);
-      }
-    setLoading(false);
+    setLoading(false);      }
+
   };
 
 
