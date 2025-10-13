@@ -19,6 +19,7 @@ function ProjectCard({
   detailedDescription,
   technologies,
   features,
+  link,
   responsibilities,
   github,
 }: ProjectCardProps) {
@@ -78,17 +79,31 @@ function ProjectCard({
         </div>
       )}
 
-      {/* GitHub button */}
-      {github && (
-        <a
-          href={github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500 text-white rounded-full text-sm font-semibold hover:bg-purple-600 transition"
-        >
-          <Github size={16} /> View on GitHub
-        </a>
-      )}
+      <div className="flex gap-3">
+        {github && (
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500 text-white rounded-full text-sm font-semibold hover:bg-purple-600 transition"
+          >
+            <Github size={16} /> View on GitHub
+          </a>
+        )}
+
+        {link && (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500 text-white rounded-full text-sm font-semibold hover:bg-purple-600 transition"
+          >
+            View here
+          </a>
+        )}
+      </div>
+
+
     </div>
   );
 }
@@ -147,16 +162,17 @@ export default function Page() {
       responsibilities: ["Designed UI/UX", "Implemented React components", "Deployed on Vercel"],
     },
     {
-      title: "Financial Dashboard (In progress)",
+      title: "Financial Dashboard ",
       year: "2025",
       shortDescription:
         "Built a Next.js financial dashboard application with interactive charts and real-time data visualization.",
       detailedDescription:
-        "Provides users with insights on financial data, allowing tracking, forecasting, and reporting in real-time.",
-      technologies: ["Next.js", "TypeScript", "Recharts", "TailwindCSS","PostgreSQL"],
-//       github: "https://github.com/Geethika-tech/Nextjs-dashboard",
-      features: ["Interactive charts", "Real-time updates", "Data export"],
-      responsibilities: ["Developed frontend", "Integrated APIs", "Implemented charts"],
+        "This is a full-stack financial dashboard application built with Next.js — including the newer App Router, Server Components, efficient data fetching, routing, and authentication.",
+      technologies: ["Next.js", "TypeScript", "TailwindCSS","PostgreSQL"],
+      github: "https://github.com/Geethika-tech/Nextjs-dashboard",
+      features: [ "Summary metrics","Chart","Searchable, filterable, and paginated invoices"],
+      link:"https://personal-project-gp-nextjs-financial-dashboard.vercel.app/",
+      responsibilities: ["Developed frontend", "Integrated APIs", "Implemented chart and other important features","Deployed on vercel"],
     },
 
   ];
