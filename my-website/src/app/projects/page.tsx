@@ -10,6 +10,7 @@ type ProjectCardProps = {
   features?: string[];
   responsibilities?: string[];
   github?: string;
+  link?: string;
 };
 
 function ProjectCard({
